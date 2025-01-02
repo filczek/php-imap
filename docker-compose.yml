@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  php:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: php-imap
+    restart: unless-stopped
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+
